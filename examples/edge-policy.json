@@ -1,0 +1,52 @@
+[
+  {
+    "name": "deny-west",
+    "source": "192.0.2.0/25",
+    "protocol": "tcp",
+    "ports": [
+      22,
+      22
+    ],
+    "action": "deny"
+  },
+  {
+    "name": "deny-east",
+    "source": "192.0.2.128/25",
+    "protocol": "tcp",
+    "ports": [
+      22,
+      22
+    ],
+    "action": "deny"
+  },
+  {
+    "name": "maintenance",
+    "source": "192.0.2.0/24",
+    "protocol": "tcp",
+    "ports": [
+      22,
+      22
+    ],
+    "action": "allow"
+  },
+  {
+    "name": "legacy-http",
+    "source": "192.0.2.0/24",
+    "protocol": "tcp",
+    "ports": [
+      80,
+      80
+    ],
+    "action": "deny"
+  },
+  {
+    "name": "web",
+    "source": "192.0.2.0/24",
+    "protocol": "tcp",
+    "ports": [
+      80,
+      81
+    ],
+    "action": "allow"
+  }
+]
